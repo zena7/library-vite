@@ -8,7 +8,6 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function handleBurgerClick() {
-    console.log("Click");
     setMenuOpen((prev) => !prev);
   }
 
@@ -17,21 +16,13 @@ export function Header() {
       <h1>Brooklyn Public Library</h1>
       <div className={classes.menu}>
         <img src={IconProfile} alt='Profile' className={classes.iconProfile} />
-        <div className={classes.iconBurgerContainer}>
+        <div
+          className={classes.iconBurgerContainer}
+          onClick={handleBurgerClick}>
           {menuOpen ? (
-            <img
-              src={IconBurgerClose}
-              alt='Burger'
-              className={classes.icon}
-              onClick={handleBurgerClick}
-            />
+            <img src={IconBurgerClose} alt='Burger' className={classes.icon} />
           ) : (
-            <img
-              src={IconBurger}
-              alt='Menu'
-              className={classes.iconBurger}
-              onClick={handleBurgerClick}
-            />
+            <img src={IconBurger} alt='Menu' className={classes.iconBurger} />
           )}
         </div>
       </div>

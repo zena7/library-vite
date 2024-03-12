@@ -20,6 +20,7 @@
 .menu img,
 h1 {
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .iconBurgerContainer {
