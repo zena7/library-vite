@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  gap: 5px;
+}
+
+.paginationContiner {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.pagCircle {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0c0c0e;
+}
+
+.active {
+  background-color: #bb945f;
+}
