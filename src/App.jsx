@@ -55,11 +55,11 @@ function App() {
         </Section>
         <Section className='contacts' id='contacts'>
           <h2>Our Contacts</h2>
-          <iframe
+          {/* <iframe
             src='https://yandex.ru/map-widget/v1/?um=constructor%3Ac93972da89a32fd07a8439f24089948346489379cc6d0add0b735b3a7348e94e&amp;source=constructor'
             width='70%'
             height='400'
-            frameBorder='0'></iframe>
+            frameBorder='0'></iframe> */}
         </Section>
         <Section className='libraryCard' id='libraryCard'>
           <h2>Digital Library Cards</h2>
