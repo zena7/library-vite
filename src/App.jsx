@@ -25,6 +25,8 @@ function App() {
         </Section>
         <Section className='favorites' id='favorites'>
           <h2>Favorites</h2>
+          <p>Pick favorites of season</p>
+          <></>
         </Section>
         <Section className='coffeeShop' id='coffeeShop'>
           <h2>Coffee shop</h2>
