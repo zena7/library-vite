@@ -139,3 +139,12 @@ p {
   margin-bottom: 0;
   font-size: 1.25rem;
 }
+
+input,
+label {
+  cursor: pointer;
+}
+
+label {
+  padding-right: 20px;
+}
