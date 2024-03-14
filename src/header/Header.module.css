@@ -15,6 +15,7 @@
   gap: 40px;
   align-items: center;
   z-index: 2;
+  position: relative;
 }
 
 .menu img,
@@ -119,4 +120,11 @@ a {
 
 .profileOrder {
   order: 1;
+}
+
+.profileMenuOpen {
+  position: absolute;
+  background-color: pink;
+  top: 10%;
+  left: 10%;
 }

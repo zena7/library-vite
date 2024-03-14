@@ -7,9 +7,14 @@ import * as classes from "./Header.module.css";
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(navigator.maxTouchPoints > 0);
+  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
   function handleBurgerClick() {
     setMenuOpen((prev) => !prev);
+  }
+
+  function handleClickProfileIcon() {
+    setProfileMenuOpen((prev) => !prev);
   }
 
   useLayoutEffect(() => {
@@ -24,7 +29,19 @@ export function Header() {
         <h1>Brooklyn Public Library</h1>
       </a>
       <div className={`${classes.menu} ${!isMobile && classes.profileOrder}`}>
-        <img src={IconProfile} alt='Profile' className={classes.iconProfile} />
+        <img
+          src={IconProfile}
+          alt='Profile'
+          className={classes.iconProfile}
+          onClick={handleClickProfileIcon}
+        />
+        {profileMenuOpen && (
+          <div className={classes.profileMenuOpen}>
+            <h3>Profile</h3>
+            <p>Log In</p>
+            <p>Register</p>
+          </div>
+        )}
         {isMobile && (
           <div
             className={classes.iconBurgerContainer}
