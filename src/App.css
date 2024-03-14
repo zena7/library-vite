@@ -47,6 +47,7 @@ p {
 .welcome {
   position: relative;
   width: 100%;
+
   padding: 39%;
   background-color: black;
   background: url(./assets/WelcomeBg.jpg);
