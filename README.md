@@ -1,5 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/af448bda-24cd-4631-8610-65073c328f1c/deploy-status)](https://app.netlify.com/sites/library-zena7/deploys)
-### [Demo](https://library-zena7.netlify.app/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+### 📚 [Demo](https://library-zena7.netlify.app/)
 
 # React + Vite
 
