@@ -17,6 +17,13 @@ export function Header() {
     setProfileMenuOpen((prev) => !prev);
   }
 
+  function handleClickHeader() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   useLayoutEffect(() => {
     if (!isMobile) {
       setMenuOpen(true);
@@ -24,10 +31,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className={classes.header} id='headerAnchor'>
-      <a href='headerAnchor'>
-        <h1>Brooklyn Public Library</h1>
-      </a>
+    <header className={classes.header}>
+      <h1 onClick={handleClickHeader}>Brooklyn Public Library</h1>
       <div className={`${classes.menu} ${!isMobile && classes.profileOrder}`}>
         <img
           src={IconProfile}
@@ -61,7 +66,6 @@ export function Header() {
       {menuOpen && (
         <div
           className={isMobile ? classes.burgerMenu : classes.burgerMenuDesktop}>
-
           <nav>
             <ul>
               <li>
