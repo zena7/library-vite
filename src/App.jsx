@@ -3,15 +3,9 @@ import "./App.css";
 import { Header } from "./header/Header";
 import { Section } from "./shared/ui/Section/Section";
 import { Slider } from "./slider/Slider";
-import { useState } from "react";
-
+import { FavoritesSection } from "./sections/favoritesSection/FavoritesSection";
 
 function App() {
-  const [season, setSeason] = useState("winter");
-
-  const handleSeasonChange = (event) => {
-    setSeason(event.target.value);
-  };
   return (
     <>
       <main>
@@ -30,39 +24,7 @@ function App() {
           </p>
           <Slider />
         </Section>
-        <Section className='favorites' id='favorites'>
-          <h2>Favorites</h2>
-          <p>Pick favorites of season</p>
-          <div
-            className='chooseSeason'
-            onChange={(event) => handleSeasonChange(event)}>
-            <input
-              type='radio'
-              name='season'
-              id='winter'
-              value='winter'></input>
-            <label htmlFor='winter'>Winter</label>
-            <input
-              type='radio'
-              name='season'
-              id='spring'
-              value='spring'></input>
-            <label htmlFor='spring'>Spring</label>
-            <input
-              type='radio'
-              name='season'
-              id='summer'
-              value='summer'></input>
-            <label htmlFor='summer'>Summer</label>
-            <input
-              type='radio'
-              name='season'
-              id='autumn'
-              value='autumn'></input>
-            <label htmlFor='autumn'>Autumn</label>
-          </div>
-          <p>It's {season}</p>
-        </Section>
+        <FavoritesSection />
         <Section className='coffeeShop' id='coffeeShop'>
           <h2>Coffee shop</h2>
           <p>
@@ -137,7 +99,6 @@ function App() {
             width='70%'
             height='400'
             frameBorder='0'></iframe>
-
         </Section>
         <Section className='libraryCard' id='libraryCard'>
           <h2>Digital Library Cards</h2>
