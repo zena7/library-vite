@@ -1,0 +1,15 @@
+.listOfFavorites {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.listOfFavorites li {
+  list-style-type: none;
+  border: 1px solid #000000;
+}
+
+@media (min-width: 1024px) {
+  .listOfFavorites {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
