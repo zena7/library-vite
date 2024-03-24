@@ -1,0 +1,37 @@
+.contactInf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+
+.contactInf h3 {
+  font-weight: 700;
+}
+
+.iframe {
+  width: 90.625%;
+  min-height: 414px;
+  border: none;
+  align-self: center;
+}
+
+.info a {
+  color: black;
+}
+
+.info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-bottom: 6.25rem;
+  padding-left: 1.25rem;
+}
+
+.info p {
+  text-align: left;
+  margin: 0 0;
+}
