@@ -4,7 +4,7 @@ import { Header } from "./header/Header";
 import { Section } from "./shared/ui/Section/Section";
 import { Slider } from "./slider/Slider";
 import { FavoritesSection } from "./sections/favoritesSection/FavoritesSection";
-
+import { ContactsSection } from "./sections/contacts/ContactsSection";
 function App() {
   return (
     <>
@@ -82,24 +82,7 @@ function App() {
             </div>
           </div>
         </Section>
-        <Section className='contacts' id='contacts'>
-          <h2>Our Contacts</h2>
-          <h3>For all Library inquiries:</h3>
-          <p>
-            Please call (617) 730-2370
-            <br /> For TTY service, please call (617)730-2370 <br />
-            Putterham Library: (617) 730-2385
-          </p>
-          <h3>Senior Staff</h3>
-          <p>
-            Library Director: <span>Amanda Hirst</span>
-          </p>
-          <iframe
-            src='https://yandex.ru/map-widget/v1/?um=constructor%3Ac93972da89a32fd07a8439f24089948346489379cc6d0add0b735b3a7348e94e&amp;source=constructor'
-            width='70%'
-            height='400'
-            frameBorder='0'></iframe>
-        </Section>
+        <ContactsSection />
         <Section className='libraryCard' id='libraryCard'>
           <h2>Digital Library Cards</h2>
         </Section>

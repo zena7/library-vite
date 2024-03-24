@@ -149,11 +149,11 @@ export function FavoritesSection() {
   };
 
   return (
-    <Section className='favorites' id='favorites'>
+    <Section className={classes.favoritesSection} id='favorites'>
       <h2>Favorites</h2>
-      <p>Pick favorites of season</p>
+      <p className={classes.chooseFavPhrase}>Pick favorites of season</p>
       <div
-        className='chooseSeason'
+        className={classes.chooseSeason}
         onChange={(event) => handleSeasonChange(event)}>
         <input
           type='radio'
@@ -161,27 +161,48 @@ export function FavoritesSection() {
           id='winter'
           value='winter'
           checked={season === "winter"}></input>
-        <label htmlFor='winter'>Winter</label>
+        <label
+          htmlFor='winter'
+          className={season === "winter" && classes.activeLabel}>
+          Winter
+        </label>
         <input type='radio' name='season' id='spring' value='spring'></input>
-        <label htmlFor='spring'>Spring</label>
+        <label
+          htmlFor='spring'
+          className={season === "spring" && classes.activeLabel}>
+          Spring
+        </label>
         <input type='radio' name='season' id='summer' value='summer'></input>
-        <label htmlFor='summer'>Summer</label>
+        <label
+          htmlFor='summer'
+          className={season === "summer" && classes.activeLabel}>
+          Summer
+        </label>
         <input type='radio' name='season' id='autumn' value='autumn'></input>
-        <label htmlFor='autumn'>Autumn</label>
+        <label
+          htmlFor='autumn'
+          className={season === "autumn" && classes.activeLabel}>
+          Autumn
+        </label>
       </div>
-      <p>It's {season}</p>
       <ul className={classes.listOfFavorites}>
         {favoritesBooks[season].map((item, index) => (
-          <li key={`${season} - ${index}`}>
-            <p>Staff Picks</p>
-            <h3>{item.author}</h3>
-            <p>{item.title}</p>
-            <p>{item.about}</p>
+          <li key={`${season} - ${index}`} className={classes.listItem}>
+            <p className={classes.paragraphPick}>Staff Picks</p>
+            <div className={classes.bookInformation}>
+              <p className={classes.bookTitle}>{item.title}</p>
+              <h3 className={classes.bookAuthor}> By {item.author}</h3>
+            </div>
+            <p className={classes.paragraphAboutBook}>{item.about}</p>
             <img
               src={item.imgSrc}
               alt={`book - ${item.title} author - ${item.author}`}
+              className={classes.bookImg}
             />
-            <button type='button'> Buy </button>
+            <button type='button' className={classes.btnBuyBook}>
+              {" "}
+              Buy{" "}
+            </button>
           </li>
         ))}
       </ul>
