@@ -14,7 +14,6 @@ p {
   margin-bottom: 0;
   font-size: 1.25rem;
   font-weight: 400;
-
 }
 
 ul {
@@ -36,4 +35,30 @@ html {
 
 .active {
   background-color: #bb945f;
+}
+
+.opacityDivOn {
+  height: 92%;
+  width: 100%;
+  position: absolute;
+  top: 9%;
+  background-color: white;
+  z-index: 0;
+  opacity: 0%;
+  animation-name: opacityFavorite;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes opacityFavorite {
+  from {
+    z-index: 0;
+    opacity: 0%;
+  }
+  to {
+    z-index: 2;
+    opacity: 100%;
+  }
 }

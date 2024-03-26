@@ -1,3 +1,7 @@
+.favoritesSection {
+  position: relative;
+}
+
 .chooseSeason {
   width: 43.75rem;
   display: flex;

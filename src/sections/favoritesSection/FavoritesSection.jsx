@@ -22,7 +22,14 @@ export function FavoritesSection() {
   const [season, setSeason] = useState("winter");
 
   const handleSeasonChange = (event) => {
-    setSeason(event.target.value);
+    const opacityDiv = document.querySelector(".opacityDiv");
+    opacityDiv.classList.add("opacityDivOn");
+
+    setTimeout(() => {
+      setSeason(event.target.value);
+    }, 400);
+
+    setTimeout(() => opacityDiv.classList.remove("opacityDivOn"), 600);
   };
 
   const favoritesBooks = {
@@ -185,6 +192,7 @@ export function FavoritesSection() {
           Autumn
         </label>
       </div>
+      <div className='opacityDiv'></div>
       <ul className={classes.listOfFavorites}>
         {favoritesBooks[season].map((item, index) => (
           <li key={`${season} - ${index}`} className={classes.listItem}>
@@ -199,7 +207,12 @@ export function FavoritesSection() {
               alt={`book - ${item.title} author - ${item.author}`}
               className={classes.bookImg}
             />
-            <button type='button' className={classes.btnBuyBook}>
+            <button
+              type='button'
+              className={classes.btnBuyBook}
+              onClick={() => {
+                console.log("buy click");
+              }}>
               {" "}
               Buy{" "}
             </button>
